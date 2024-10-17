@@ -12,9 +12,9 @@ rm 'S_coil'*
 #Ensure all coordinate files cleared 
 rm coords/''*
 #Generate coil coordinates
-python 3D_coil_gen.py --regcoil_path '/home/ssharpe/REGCOIL/stellarators/RUN/regcoil_out.W7X.nc' --nescin_path '/home/ssharpe/REGCOIL/stellarators/RUN/nescin.out' --coils_per_p $coils_per_p --p $periods --c_t $thickness
+python3 3D_coil_gen.py --regcoil_path '../examples/regcoil_out.W7X.nc' --nescin_path '../examples/nescin.out' --coils_per_p $coils_per_p --p $periods --c_t $thickness
 #Call code that makes coil step files here
-python Coil_ind_splines_pythonAPI.py --coils $tot_coils #$tot_coils
+python3 Coil_ind_splines_pythonAPI.py --coils $tot_coils #$tot_coils
 
 
 
